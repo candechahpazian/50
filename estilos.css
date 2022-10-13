@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html{
+	height: 100%;
+}
+body{
+	text-align: center;
+	min-height: 100%;
+
+}
+.grid_container{
+	display: grid;
+	grid-template: 
+	"header" 100px
+	"navbar" 200px
+	"main"	auto
+	"footer" 100px;
+}
+body{
+	text-align: center;
+	min-height: 100%;
+	background-image: url(imgs/body.png);
+	background-size: cover;
+
+}
+.header{
+	grid-area: header;
+}
+.logoheader{
+	margin-top: 0.15cm;
+    margin-bottom: 10%;
+	width: 90%;
+	height: auto;
+    display: block;
+    margin: 0px auto;
+}
+
+.navbar{
+	grid-area: navbar;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-evenly;
+
+}
+
+.pagina{
+	font-family:'Fredoka', sans-serif;;
+	text-decoration: none;
+	color: #ffffff;
+	border: 1cm;
+	background-color: #aad4ff;
+	padding: 0.45cm;
+	border-radius: 1cm;
+}
+.pagina:hover{
+	color: #ffffff;
+	background-color: #5a738a;
+}
+.main{
+	grid-area: main;
+	font-family: 'Urbanist';
+	font-size: 1.15em;
+	display: grid;
+	grid-template: 
+	"banner" 1fr
+	"producto"  auto /
+	100%;
+}
+.banner{
+	grid-area: banner;
+	margin-top: 0.5cm;
+	display: grid;
+}
+.banner img{
+	width: 100%;
+	grid-area: foto;
+}
+.producto{
+	grid-area: producto;
+	display: grid;
+	grid-template: 
+	"productotitulo" 85px
+	"algodon" 350px
+	"texto1" 70px
+	"gomitas" 350px
+	"texto2" 70px
+	"malvavisco" 350px
+	"texto3" 70px
+	"selva" 350px
+	"texto4" 70px /
+	1fr		;
+	margin-bottom: 1cm;
+    
+}
+.producto img {
+    width: 50%;
+    height: auto;
+    border-radius: 100%;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #ffaada
+}
+.productotitulo{
+	font-family:'Fredoka', sans-serif;
+	color: #aad4ff;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-left: 0.5cm;
+}
+.fotoproducto{
+	height: 175px;
+}
+.algodon{
+	grid-area: algodon;
+}
+.gomitas{
+	grid-area: gomitas;
+}
+.malvavisco{
+	grid-area: malvavisco;
+}
+.selva{
+	grid-area: selva;
+}
+h3 {
+    color: #f7cd79;
+    font-family: 'Fredoka', sans-serif;
+}
+.footer{
+	grid-area: footer;
+	display: grid;
+	grid-template: 
+	"logo	links" 1fr /
+	300px	auto;
+	align-items: center;
+	justify-items: end;
+	align-content: center;
+	border-top:#a2f8ba solid 0.09cm ;
+	background-color: #ffffff;
+}
+.logof{
+	grid-area: logo;
+	width: 100%;
+	height: auto;
+}
+.links{
+	grid-area: links;
+    float: right;
+
+}
+.redes1{
+	width: 15%;
+	height: 10%;
+}
+.redes2{
+	width: 15%;
+	height: 10%;
+}
+.lfooter{
+	width: 78.9px;
+	height: 91px;
+}
+.red1{
+	width: 57,75px;
+}
+.titulo1{
+    display: grid;
+    color: #ffaada;
+	font-size: 25px;
+	text-align: center;
+	margin-top: 1em;
+	font-weight:bolder;
+}
+.principal{
+    grid-area: main;
+	margin-top: 1rem;
+	display: grid;
+	justify-content: center;
+}
+.textnro1{
+    grid-area: main;
+	font-family: 'Poppins', sans-serif;
+    display: grid;
+	background-color: #ffaada;
+	color: white;
+	padding: 1em;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+	.grid_container{
+		grid-template: 
+		"header 	navbar" 	100px 
+		"main	 	main" 		auto
+		"footer 	footer" 	100px /
+		200px 		auto;
+	}
+    .logoheader{
+        width: 100%;
+    }
+   
+	.main{
+		font-size: 1.5em;
+	}
+    .banner {
+        width: auto;
+        height: 10%;
+    }
+	.producto{
+		grid-area: producto;
+		display: grid;
+		grid-template: 
+		"productotitulo	productotitulo" 100px
+		"algodon	gomitas" 300px
+		"texto1		texto2" 100px
+		"malvavisco	selva" 300px
+		"texto3		texto4" 100px /
+		1fr			1fr;
+		margin-bottom: 1cm;
+	}
+	.navbar{
+		margin-left: 3cm;
+	}
+    .redes1{
+        float: right;
+    }
+    .redes2{
+        float: right;
+    }
+}
+
+
+@media (min-width: 992px) and (max-width:1199px) {
+	.grid_container{
+		grid-template: 
+		"header 	header 	navbar		navbar" 	100px
+		"main	 	main 	main		main" 		auto
+		"footer 	footer 	footer		footer" 	80px /
+		1fr 		1fr 	1fr			1fr;
+	}
+    .logoheader{
+        width: 50%;
+    }
+    .pagina {
+        text-align: right;
+    }
+	.main{
+		font-size: 1.525em;
+	}
+    .banner {
+        height: 10%;
+    }
+	
+	.producto{
+		grid-area: producto;
+		display: grid;
+		grid-template: 
+		"titulo		titulo		titulo		titulo" 85px
+		"algodon	gomitas		malvavisco	selva" 800px
+		"texto		texto		texto		texto" 70px /
+		1fr			1fr			1fr			1fr	;
+		margin-bottom: 1cm;
+	}
+	.productotitulo{
+		grid-area: titulo;
+	}
+    .redes1{
+        float: right;
+        width: 5%;
+        height: 5%;
+    }
+    .redes2{
+        float: right;
+        width: 5%;
+        height: 5%;
+    }
+	
+}
+@media (min-width:1200px) {
+	.grid_container{
+		width: 90%;
+		margin: auto;
+		grid-template: 
+		"header 	header 	navbar		navbar" 	100px
+		"main	 	main 	main		main" 		auto
+		"footer 	footer 	footer		footer" 	100px /
+		1fr 		1fr 	1fr			1fr;
+	}
+    
+    .logoheader{
+        width: 50%;
+        float: left;
+    }
+    .banner {
+        width: auto;
+        height: 10%;
+    }
+	body{
+		text-align: center;
+		min-height: 100%;
+		background-image: url(imga/body.png);
+		background-size: cover;
+	
+	}
+	.main{
+		font-size: 1.55em;
+        grid-template:
+        "banner    banner    banner   banner" 100px
+        "banner    banner    banner   banner"  auto
+        "producto  producto  producto producto" auto/
+	    1fr       1fr      1fr      1fr;
+    } 
+	
+	.producto{
+		grid-area: producto;
+		display: grid;
+		grid-template: 
+		"titulo		titulo		titulo		titulo" 85px
+		"algodon    gomitas		malvavisco	selva" 175px
+		"texto		texto		texto		texto" 70px /
+		1fr			1fr			1fr			1fr	;
+		margin-bottom: 1cm;
+	}
+	.productotitulo{
+		grid-area: titulo;
+	}
+	.footer{
+		background-color: transparent;
+	}
+    .redes1{
+        float: right;
+        width: 5%;
+        height: 5%;
+    }
+    .redes2{
+        float: right;
+        width: 5%;
+        height: 5%;
+    }
+
+}
